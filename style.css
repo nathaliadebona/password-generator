@@ -146,3 +146,59 @@ label {
     font-weight: 900;
     color: var(--color-bg);
 }
+
+#strength {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-strength-box);
+}
+
+#strength p {
+    font-size: 0.8rem;
+    color: var(--color-text-secondary);
+}
+
+#strength-row {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+#strength-info {
+    font-size: 1.2rem;
+}
+
+#strength-bars {
+    display: flex;
+    gap: 0.4rem;
+}
+
+.strength-bar {
+    width: 0.5rem;
+    height: 1.3rem;
+    border: 0.125rem solid var(--color-text);
+}
+
+#generate-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 100%;
+    border: 0.0625rem solid var(--color-accent);
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-bg);
+    background-color: var(--color-accent);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in, color 0.3s ease-in;
+}
+
+#generate-btn:hover {
+    color: var(--color-accent);
+    background-color: var(--color-card);
+}
