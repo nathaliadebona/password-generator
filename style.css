@@ -1,0 +1,13 @@
+:root {
+    --color-bg: #13121a;
+    --color-card: #24232b;
+    --color-strength-box: #18171f;
+    --color-text: #e6e5ea;
+    --color-text-secondary: #817d92;
+    --color-too-weak: #f64a4a;
+    --color-weak: #fb7c58;
+    --color-medium: #f9cd64;
+    --color-green: #a4ffaf;
+
+    --font-text: 'JetBrains Mono', monospace;
+}
