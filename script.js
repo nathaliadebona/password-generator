@@ -7,6 +7,7 @@ const symbolsCheckbox = document.getElementById('symbols');
 const generateBtn = document.getElementById('generate-btn');
 const passwordBox = document.getElementById('password');
 const feedbackPill = document.getElementById('feedback-pill');
+const copyBtn = document.getElementById('copy-btn');
 
 function updateSlider() {
     lengthNumber.textContent = lengthSlider.value;
@@ -38,6 +39,12 @@ function handleGenerate() {
 }
 
 generateBtn.addEventListener('click', handleGenerate);
+
+function handleCopy() {
+    navigator.clipboard.writeText(passwordBox.textContent);
+}
+
+copyBtn.addEventListener('click', handleCopy);
 
 function showFeedbackMessage(message) {
     feedbackPill.textContent = message;
