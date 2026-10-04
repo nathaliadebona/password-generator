@@ -6,6 +6,7 @@ const numbersCheckbox = document.getElementById('numbers');
 const symbolsCheckbox = document.getElementById('symbols');
 const generateBtn = document.getElementById('generate-btn');
 const passwordBox = document.getElementById('password');
+const feedbackPill = document.getElementById('feedback-pill');
 
 function updateSlider() {
     lengthNumber.textContent = lengthSlider.value;
@@ -21,6 +22,7 @@ function handleGenerate() {
     const hasSelectedType = uppercaseCheckbox.checked || lowercaseCheckbox.checked || numbersCheckbox.checked || symbolsCheckbox.checked;
 
     if (!hasSelectedType) {
+        showFeedbackMessage("Select at least one option");
         return;
     }
 
@@ -36,5 +38,14 @@ function handleGenerate() {
 }
 
 generateBtn.addEventListener('click', handleGenerate);
+
+function showFeedbackMessage(message) {
+    feedbackPill.textContent = message;
+    feedbackPill.classList.add("show");
+
+    setTimeout(() => {
+        feedbackPill.classList.remove("show");
+    }, 2000);
+}
 
 updateSlider();
