@@ -1,5 +1,11 @@
 const lengthSlider = document.getElementById('character-length');
 const lengthNumber = document.getElementById('length-number');
+const uppercaseCheckbox = document.getElementById('uppercase');
+const lowercaseCheckbox = document.getElementById('lowercase');
+const numbersCheckbox = document.getElementById('numbers');
+const symbolsCheckbox = document.getElementById('symbols');
+const generateBtn = document.getElementById('generate-btn');
+const passwordBox = document.getElementById('password');
 
 function updateSlider() {
     lengthNumber.textContent = lengthSlider.value;
@@ -10,5 +16,19 @@ function updateSlider() {
 }
 
 lengthSlider.addEventListener('input', updateSlider);
+
+function handleGenerate() {
+    const password = generatePassword(
+        lengthSlider.value,
+        uppercaseCheckbox.checked,
+        lowercaseCheckbox.checked,
+        numbersCheckbox.checked,
+        symbolsCheckbox.checked
+    );
+
+    passwordBox.textContent = password;
+}
+
+generateBtn.addEventListener('click', handleGenerate);
 
 updateSlider();
