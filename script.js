@@ -52,6 +52,17 @@ function handleGenerate() {
 
 generateBtn.addEventListener('click', handleGenerate);
 
+
+function updateStrengthBars(level) {
+    strengthBars.forEach((bar, index) => {
+        bar.classList.remove("level-1", "level-2", "level-3", "level-4");
+
+        if (index < level) {
+            bar.classList.add("level-" + level);
+        }
+    });
+}
+
 function handleCopy() {
     navigator.clipboard.writeText(passwordBox.textContent);
     showFeedbackMessage("Copied!");

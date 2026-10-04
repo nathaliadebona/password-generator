@@ -181,6 +181,26 @@ label {
     border: 0.125rem solid var(--color-text);
 }
 
+.strength-bar.level-1 {
+    border-color: var(--color-too-weak);
+    background-color: var(--color-too-weak);
+}
+
+.strength-bar.level-2 {
+    border-color: var(--color-weak);
+    background-color: var(--color-weak);
+}
+
+.strength-bar.level-3 {
+    border-color: var(--color-medium);
+    background-color: var(--color-medium);
+}
+
+.strength-bar.level-4 {
+    border-color: var(--color-accent);
+    background-color: var(--color-accent);
+}
+
 #generate-btn {
     display: flex;
     justify-content: center;
