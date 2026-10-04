@@ -48,6 +48,7 @@ function handleGenerate() {
     const strengthLevel = calculatePasswordStrength(lengthSlider.value, uppercaseCheckbox.checked, lowercaseCheckbox.checked, numbersCheckbox.checked, symbolsCheckbox.checked);
 
     strengthInfo.textContent = strengthText[strengthLevel - 1];
+    updateStrengthBars(strengthLevel);
 }
 
 generateBtn.addEventListener('click', handleGenerate);
