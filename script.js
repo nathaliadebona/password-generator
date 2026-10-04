@@ -81,3 +81,4 @@ function showFeedbackMessage(message) {
 }
 
 updateSlider();
+handleGenerate();
