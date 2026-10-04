@@ -105,7 +105,7 @@ label {
 
 #character-length::-webkit-slider-runnable-track {
     height: 0.4rem;
-    background-color: var(--color-bg);
+    background: linear-gradient(to right, var(--color-accent) var(--progress), var(--color-bg) var(--progress));
 }
 
 #character-length::-webkit-slider-thumb {
