@@ -36,3 +36,43 @@ function generatePassword(length, useUppercase, useLowercase, useNumbers, useSym
 
     return password;
 }
+
+function calculatePasswordStrength(length, useUppercase, useLowercase, useNumbers, useSymbols) {
+    let score = 0;
+
+    if (length >= 12) {
+        score += 10;
+    } else if (length >= 8) {
+        score += 5;
+    }
+
+    if (useUppercase) {
+        score += 3;
+    }
+
+    if (useLowercase) {
+        score += 3;
+    }
+
+    if (useNumbers) {
+        score += 3;
+    }
+
+    if (useSymbols) {
+        score += 6;
+    }
+
+    if (score >= 19) {
+        return 4;
+    }
+
+    if (score >= 13) {
+        return 3;
+    }
+
+    if (score >= 7) {
+        return 2;
+    }
+
+    return 1;
+}
