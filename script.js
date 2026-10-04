@@ -8,6 +8,14 @@ const generateBtn = document.getElementById('generate-btn');
 const passwordBox = document.getElementById('password');
 const feedbackPill = document.getElementById('feedback-pill');
 const copyBtn = document.getElementById('copy-btn');
+const strengthInfo = document.getElementById('strength-info');
+const strengthBars = document.querySelectorAll('.strength-bar');
+const strengthText = [
+    "TO WEAK",
+    "WEAK",
+    "MEDIUM",
+    "STRONG"
+]
 
 function updateSlider() {
     lengthNumber.textContent = lengthSlider.value;
@@ -36,6 +44,10 @@ function handleGenerate() {
     );
 
     passwordBox.textContent = password;
+
+    const strengthLevel = calculatePasswordStrength(lengthSlider.value, uppercaseCheckbox.checked, lowercaseCheckbox.checked, numbersCheckbox.checked, symbolsCheckbox.checked);
+
+    strengthInfo.textContent = strengthText[strengthLevel - 1];
 }
 
 generateBtn.addEventListener('click', handleGenerate);
