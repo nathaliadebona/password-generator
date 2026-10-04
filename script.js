@@ -42,6 +42,7 @@ generateBtn.addEventListener('click', handleGenerate);
 
 function handleCopy() {
     navigator.clipboard.writeText(passwordBox.textContent);
+    showFeedbackMessage("Copied!");
 }
 
 copyBtn.addEventListener('click', handleCopy);
