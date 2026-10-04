@@ -18,6 +18,12 @@ function updateSlider() {
 lengthSlider.addEventListener('input', updateSlider);
 
 function handleGenerate() {
+    const hasSelectedType = uppercaseCheckbox.checked || lowercaseCheckbox.checked || numbersCheckbox.checked || symbolsCheckbox.checked;
+
+    if (!hasSelectedType) {
+        return;
+    }
+
     const password = generatePassword(
         lengthSlider.value,
         uppercaseCheckbox.checked,
