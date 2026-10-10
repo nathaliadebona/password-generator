@@ -6,6 +6,8 @@ Based on a [Frontend Mentor](https://www.frontendmentor.io/) challenge, built as
 
 https://nathaliadebona.github.io/password-generator/
 
+<img width="1824" height="1082" alt="nathaliadebona github io_password-generator_" src="https://github.com/user-attachments/assets/bf80c1ff-be56-44e5-a0f3-3a9782e51e7d" />
+
 ## Features
 
 - Adjustable length from 5 to 20 characters, with a slider that fills up to the thumb as you drag
